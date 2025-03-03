@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Health Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Financial Health Assessment</h2>
+        <form>
+            <label>Age:</label>
+            <input type="number" id="age" min="13" max="17">
+            
+            <label>Monthly Allowance/Income (₹):</label>
+            <input type="number" id="income">
+            
+            <label>Monthly Expenses (₹):</label>
+            <input type="number" id="expenses">
+            
+            <label>What are your financial goals?</label>
+            <textarea id="financial_goals" rows="3" placeholder="Describe your goals..."></textarea>
+            
+            <label>Do you track your expenses?</label>
+            <select id="track_expenses">
+                <option value="never">Never</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="always">Always</option>
+            </select>
+            
+            <label>Do you save a portion of your income?</label>
+            <select id="savings_habit">
+                <option value="no">No</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="regularly">Regularly</option>
+            </select>
+            
+            <label>Do you have any outstanding debts?</label>
+            <select id="debts">
+                <option value="none">None</option>
+                <option value="small">Small</option>
+                <option value="large">Large</option>
+            </select>
+            
+            <label>How do you usually spend your money?</label>
+            <select id="spending_habits">
+                <option value="necessities">Mostly on necessities</option>
+                <option value="mixed">A mix of necessities and wants</option>
+                <option value="luxuries">Mostly on luxuries</option>
+            </select>
+            
+            <label>Do you set financial goals?</label>
+            <select id="goals">
+                <option value="never">Never</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="always">Always</option>
+            </select>
+            
+            <label>How comfortable are you with investing?</label>
+            <select id="investing_experience">
+                <option value="none">No experience</option>
+                <option value="basic">Basic understanding</option>
+                <option value="moderate">Moderate knowledge</option>
+                <option value="advanced">Advanced experience</option>
+            </select>
+            
+            <label>How often do you review your financial situation?</label>
+            <select id="review_frequency">
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="regularly">Regularly</option>
+                <option value="frequently">Frequently</option>
+            </select>
+            
+            <button type="button" onclick="calculateScore()">Calculate My Financial Health Score</button>
+        </form>
+        <div id="result-container" class="hidden">
+            <h3 id="result"></h3>
+            <canvas id="scoreChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
